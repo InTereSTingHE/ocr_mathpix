@@ -14,8 +14,8 @@ from PIL import ImageGrab
 env = os.environ
 
 default_headers = {
-    'app_id': env.get('APP_ID', 'ID'),#ID for your ID
-    'app_key': env.get('APP_KEY', 'KEY'),#KEY for your KEY
+    'app_id': env.get('APP_ID', 'ID'), # ID for your ID
+    'app_key': env.get('APP_KEY', 'KEY'), # KEY for your KEY
     'Content-type': 'application/json'
 }
 
@@ -37,19 +37,19 @@ def latex(args, headers=default_headers, timeout=30):
     return json.loads(r.text)
 
 
-def mathpix_clipboard(): # 识别剪贴板公式
+def mathpix_clipboard(): # get clipboard
     im = ImageGrab.grabclipboard()
     im.save('equa.png','PNG')
     r = latex({
         'src': image_uri("equa.png"),
-        'formats': ['mathml'],#or 'text' for latex
+        'formats': ['mathml'],# or 'text' for latex...see API doc, change with print
         'data_options': {
             'include_mathml': True
             }
     })
 
-    mlout = '<math xmlns="http://www.w3.org/1998/Math/MathML">' + r['mathml'][6:]
-    print(r['mathml'])
+    mlout = '<math xmlns="http://www.w3.org/1998/Math/MathML">' + r['mathml'][6:] # copy to microsoft word
+    print(r['mathml']) # change with formats
     print(mlout)
 
 if __name__ == '__main__':
