@@ -1,4 +1,8 @@
 # ocr_mathpix
-math ocr by mathpix API
+math/formula ocr by mathpix API
+also alphbet
+both handwriting & print
 
-API doc https://docs.mathpix.com/?python#introduction
+MathpixOCR uses API keys to allow access to the API. You can find your API keys on your account dashboard at https://accounts.mathpix.com/ocr-api.
+
+API doc https://docs.mathpix.com
