@@ -19,5 +19,5 @@ LATEX, mathml, and so on
 Edit ID &KEY in py  
 Use screenshot tool to copy the image then run the py
 
-MathpixOCR uses API keys to allow access to the API. You can find your API keys on your account dashboard at https://accounts.mathpix.com/ocr-api.  
+MathpixOCR uses API keys to allow access to the API. You can find your API keys on your account dashboard at https://accounts.mathpix.com/ocr-api  
 [API doc](https://docs.mathpix.com)
