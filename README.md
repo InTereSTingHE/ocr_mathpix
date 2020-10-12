@@ -5,7 +5,7 @@
 
 使用截图工具截图复制图片后运行脚本
 
-MathpixOCR 使用 API keys 连接，[注册获取](https://accounts.mathpix.com/ocr-api.)
+MathpixOCR 使用 API keys 连接，[注册获取](https://accounts.mathpix.com/ocr-api)
 <br/>[API doc](https://docs.mathpix.com)
 
 ---
