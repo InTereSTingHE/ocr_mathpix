@@ -2,6 +2,7 @@ import os
 import base64
 import requests
 import json
+import pyperclip
 from PIL import ImageGrab
 #
 # Common module for calling Mathpix OCR service from Python.
@@ -51,6 +52,7 @@ def mathpix_clipboard(): # get clipboard
     mlout = '<math xmlns="http://www.w3.org/1998/Math/MathML">' + r['mathml'][6:] # copy to microsoft word
     print(r['mathml']) # change with formats
     print(mlout)
+    pyperclip.copy(mlout)
 
 if __name__ == '__main__':
     mathpix_clipboard()
